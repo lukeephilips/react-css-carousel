@@ -1,13 +1,11 @@
 import autobind from 'autobind-decorator';
 import React from 'react';
-import Radium, { Style } from 'radium';
 import Carousel from './carousel';
-import configStyles from './config-styles';
 import Frame from './frame';
 import Nav from './nav';
 import Slide from './slide';
-import styles from './app-styles';
 
+import css from './styles/index.css';
 
 @autobind
 export default class DriftApp extends React.Component {
@@ -21,6 +19,7 @@ export default class DriftApp extends React.Component {
     })
   }
   handleClickNext() {
+    console.log("ding");
     this.setState({
       showIndex: Math.min(this.state.showIndex + 1, this.state.numSlides - 1)
     })
@@ -30,10 +29,10 @@ export default class DriftApp extends React.Component {
                 onNext={this.handleClickNext} hasNext={this.state.showIndex < this.state.numSlides - 1} />
   }
   render() {
+    const imageWidth = 640 //from css
     return (
       <Frame>
-      <Style rules={styles} />
-        <Carousel showIndex={this.state.showIndex} nav={this.renderNav()} width={configStyles.imageWidth}>
+        <Carousel showIndex={this.state.showIndex} nav={this.renderNav()} width={imageWidth}>
           <Slide image={require('./images/1.jpg')} title="Imperial Mockery">
             In a show of defiance, rebels have again made mockery of the majesty that is service to the Empire.
             These objects were immediately removed from the reflecting pool in Coruscant's Central Square when found
