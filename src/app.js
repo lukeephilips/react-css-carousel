@@ -6,8 +6,6 @@ import Frame from './frame';
 import Nav from './nav';
 import Slide from './slide';
 
-import configStyles from './config-styles';
-
 @autobind
 export default class DriftApp extends React.Component {
   state = {
