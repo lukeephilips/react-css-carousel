@@ -1,10 +1,12 @@
 import autobind from 'autobind-decorator';
 import React from 'react';
-
 import Carousel from './carousel';
 import Frame from './frame';
 import Nav from './nav';
 import Slide from './slide';
+
+import configStyles from './styles/config.css';
+import css from './styles/app.css';
 
 @autobind
 export default class DriftApp extends React.Component {

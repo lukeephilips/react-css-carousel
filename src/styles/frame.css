@@ -1,0 +1,8 @@
+@import './config.css';
+
+.root {
+  postion: relative;
+  maxWidth: 100%;
+  width: var(--imageWidth);
+  margin: 50px auto;
+}
