@@ -1,7 +1,7 @@
 @import './config.css';
 
 .root {
-  postion: relative;
+  postion: absolute;
   maxWidth: 100%;
   width: var(--imageWidth);
   margin: 50px auto;
