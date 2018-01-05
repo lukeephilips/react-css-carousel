@@ -22,8 +22,11 @@ module.exports = {
       loaders: ['babel'],
       include: path.join(__dirname, 'src')
     }, {
-      test: /\.jpg/, 
+      test: /\.jpg/,
       loader: 'file'
+    }, {
+      test: /\.css/,
+      loaders: ['style', 'css?modules&localIdentName=[local]---[hash:base64:5]', 'cssnext']
     }]
   }
 }
