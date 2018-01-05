@@ -4,14 +4,20 @@ import css from './styles/nav.css';
 
 const { func, bool } = React.PropTypes
 
+function getPrevStyles(props) {
+  return props.hasPrevious ? props.css.prev : props.css.prevHidden
+}
+function getNextStyles(props) {
+  return props.hasNext ? props.css.next : props.css.nextHidden
+}
 function Nav(props) {
   return (
     <div className={props.css.root}>
       <button
-        className={props.css.prev}
+        className={getPrevStyles(props)}
         onClick={props.onPrevious}>&#10094;</button>
       <button
-        className={props.css.next}
+        className={getNextStyles(props)}
         onClick={props.onNext}>&#10095;</button>
     </div>
   )

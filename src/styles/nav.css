@@ -47,6 +47,12 @@
   text-align: right;
 }
 
-.hidden {
+.prevHidden {
+  composes: prev;
+  visibility: hidden;
+}
+
+.nextHidden {
+  composes: next;
   visibility: hidden;
 }
