@@ -5,7 +5,7 @@
 }
 .root {
   position: relative;
-  top: 0
+  top: 0;
   transition: all .6s;
 }
 .footer {
